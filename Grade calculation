@@ -1,0 +1,39 @@
+
+#include<stdio.h> 
+ 
+int main() 
+{ 
+  int n; 
+  printf("Enter the number of subjects\n"); 
+  scanf("%d", &n); 
+  int marks, average; 
+  char grade; 
+  average = 0; 
+  printf("Enter the scores one by one now\n"); 
+  for(int i = 0; i < n; i++) 
+    { 
+      scanf("%d", &marks); 
+      average += marks; 
+    } 
+  average /= n; 
+  if(average > 40) 
+    if(average > 50) 
+      if (average > 60) 
+		if (average > 70) 
+	  	  if (average > 80) 
+	        if(average > 90) 
+	      	  grade = 'A'; 
+	        else 
+	          grade = 'B'; 
+	      else 
+	        grade = 'C'; 
+	    else 
+	      grade = 'D'; 
+      else 
+	    grade = 'E'; 
+    else 
+      grade = 'F'; 
+  else 
+    grade = 'U'; 
+  printf("Your grade is %c\n", grade); 
+} 
